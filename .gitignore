@@ -48,7 +48,7 @@ typings/
 *.tsbuildinfo
 
 # Optional npm cache directory
-.npm
+.npmkf
 
 # Optional eslint cache
 .eslintcache
