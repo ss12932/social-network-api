@@ -1,4 +1,6 @@
 const express = require('express');
+const morgan = require('morgan');
+const connectToDatabase = require('./config/connection');
 
 const PORT = process.env.PORT || 3001;
 
@@ -8,6 +10,15 @@ app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.listen(PORT, () => {
-  console.log(`Listening on https://localhost:${PORT} 🚀`);
-});
+const init = async () => {
+  try {
+    await connectToDatabase();
+    app.listen(PORT, () => {
+      console.log(`Server listening on https://localhost:${PORT} 🚀`);
+    });
+  } catch (err) {
+    console.log(`Failed to initiate server || ${err.message}`);
+  }
+};
+
+init();
