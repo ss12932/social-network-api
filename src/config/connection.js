@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { connection, connect } = require('mongoose');
+const mongoose = require('mongoose');
 
 const connectToDatabase = async () => {
   //wrapped in try/catch with async/await to handle connection errors. There's possibility of 1 of 2 errors that can occur with mongoose connection:
@@ -15,7 +15,7 @@ const connectToDatabase = async () => {
       useNewUrlParser: true,
     };
 
-    await connect(connectionString, options);
+    await mongoose.connect(connectionString, options);
 
     console.log(
       `Successfully connected to the database || ${process.env.MONGODB_NAME}`
