@@ -7,9 +7,13 @@ const {
   removeUserById,
 } = require('../../controllers/api/users');
 const friends = require('./friends');
+
 const router = Router();
 
+//  /api/users
 router.route('/').get(getAllUsers).post(createNewUser);
+
+//  /api/users/:userId
 router
   .route('/:userId')
   .get(getSingleUser)
