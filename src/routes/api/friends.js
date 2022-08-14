@@ -5,9 +5,9 @@ const {
   deleteFriendForUser,
 } = require('../../controllers/api/friends');
 
-const router = Router();
+const router = Router({ mergeParams: true });
 
 router.route('/friends').post(createNewFriendForUser);
-router.route('/friends/:friendId').post(deleteFriendForUser);
+router.route('/friends/:friendId').delete(deleteFriendForUser);
 
 module.exports = router;
