@@ -1,5 +1,12 @@
 const { Router } = require('express');
 const reactions = require('./reactions');
+const {
+  getAllThoughts,
+  createSingleThought,
+  getThoughtById,
+  updateThoughtById,
+  deleteThoughtById,
+} = require('../../controllers/api/thoughts');
 
 const router = Router();
 router.route('/').get(getAllThoughts).post(createSingleThought);

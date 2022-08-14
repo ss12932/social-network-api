@@ -1,4 +1,8 @@
 const { Router } = require('express');
+const {
+  createNewReactionForThought,
+  deleteReactionForThought,
+} = require('../../controllers/api/reactions');
 
 const router = Router({ mergeParams: true });
 
