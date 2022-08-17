@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
-const { format } = require('date-fns');
+const formatDate = require('../utils');
+
 
 const reactionSchema = new Schema = ({
   username: {
@@ -18,7 +19,7 @@ const reactionSchema = new Schema = ({
     required: true,
     trim: true,
     default: new Date(),
-    get: (value) => format(new Date(value), "yyyy-MM-dd'T'HH:mm:ss"),
+    get: formatDate,
 }
 },
 { toJSON: { getters: true } }
