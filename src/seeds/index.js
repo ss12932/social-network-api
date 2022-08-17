@@ -1,6 +1,6 @@
 const connectToDatabase = require('../config/connection');
 const { User, Thought, Reaction } = require('../models');
-const { seedUsers } = require('./users');
+const seedUsers = require('./users');
 
 const init = async () => {
   try {
