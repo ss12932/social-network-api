@@ -1,17 +1,17 @@
 const getAllThoughts = (req, res) => {
-  res.send(getAllThoughts);
+  res.send('getAllThoughts');
 };
 const createSingleThought = (req, res) => {
-  res.send(createSingleThought);
+  res.send('createSingleThought');
 };
 const getThoughtById = (req, res) => {
-  res.send(getThoughtById);
+  res.send('getThoughtById');
 };
 const updateThoughtById = (req, res) => {
-  res.send(updateThoughtById);
+  res.send('updateThoughtById');
 };
 const deleteThoughtById = (req, res) => {
-  res.send(deleteThoughtById);
+  res.send('deleteThoughtById');
 };
 
 module.exports = {
