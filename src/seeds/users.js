@@ -1,15 +1,21 @@
 const { User } = require('../models');
+const { faker } = require('@faker-js/faker');
 
-const users = [
-  { username: 'sinh1234', email: 'sinh1234@email.com' },
-  { username: 'hamed5678', email: 'hamed5678@email.com' },
-  { username: 'sina9999', email: 'sina9999@email.com' },
-  { username: 'fred1234', email: 'fred1234@email.com' },
-  { username: 'johndoe', email: 'johndoe@hotmail.com' },
-];
+const generateDummyUsers = () => {
+  const usersArr = [];
+  for (let i = 0; i < 100; i++) {
+    const username = faker.internet.userName();
+    const email = faker.internet.email(username);
+    const user = { username, email };
+    usersArr.push(user);
+  }
+  console.log(usersArr);
+  return usersArr;
+};
 
 const seedUsers = async () => {
   try {
+    const users = generateDummyUsers();
     const userPromises = users.map((user) => User.create(user));
 
     await Promise.all(userPromises);
