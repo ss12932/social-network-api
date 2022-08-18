@@ -5,11 +5,8 @@ const generateDummyFriends = async () => {
   const users = await User.find({});
 
   const friendsPromises = users.map(async (user) => {
-    // destructure the id for the current user of the users array
-    const { _id: userId } = user;
-
     // filter through the users array to exclude the current user.
-    const filteredUsersArr = users.filter((user) => user._id !== userId);
+    const filteredUsersArr = users.filter((users) => users._id !== user._id);
 
     //generate a random index of the filtered users array.
     const filteredIndex = Math.floor(Math.random() * filteredUsersArr.length);
@@ -22,7 +19,7 @@ const generateDummyFriends = async () => {
       user.friends.push(randomFriendId);
 
       //using id of current user, we will push the new friend into their friends array and update the database.
-      await User.findByIdAndUpdate(userId, {
+      await User.findByIdAndUpdate(user._id, {
         $push: {
           friends: randomFriendId,
         },
@@ -31,7 +28,7 @@ const generateDummyFriends = async () => {
       //we also have to do the same for the random friend, we need to add the current user to their friends array and update the database.
       await User.findByIdAndUpdate(randomFriendId, {
         $push: {
-          friends: userId,
+          friends: user._id,
         },
       });
     }

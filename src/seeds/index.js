@@ -20,7 +20,7 @@ const init = async () => {
     await seedUsers();
     await seedFriends();
     await seedThoughts();
-    // await seedReactions();
+    await seedReactions();
 
     // after seed completion, exit process
     process.exit(0);
