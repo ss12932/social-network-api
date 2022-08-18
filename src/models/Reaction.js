@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-const formatDate = require('../utils');
+const { formatDate } = require('../utils');
 
 const reactionSchema = new Schema(
   {

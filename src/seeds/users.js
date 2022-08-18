@@ -3,7 +3,7 @@ const { faker } = require('@faker-js/faker');
 
 const generateDummyUsers = () => {
   const usersArr = [];
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 10; i++) {
     const username = faker.internet.userName();
     const email = faker.internet.email(username);
     const user = { username, email };
