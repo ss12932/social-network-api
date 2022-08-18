@@ -6,10 +6,8 @@ const generateDummyUsers = () => {
   for (let i = 0; i < 10; i++) {
     const username = faker.internet.userName();
     const email = faker.internet.email(username);
-    const user = { username, email };
-    usersArr.push(user);
+    usersArr.push({ username, email });
   }
-  console.log(usersArr);
   return usersArr;
 };
 

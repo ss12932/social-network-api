@@ -45,7 +45,7 @@ const seedFriends = async () => {
 
     console.log("Successfully seeded user's friends");
   } catch (err) {
-    console.log(`Failed to seed user's friends' data || ${err.message}`);
+    console.log(`Failed to seed friends data || ${err.message}`);
   }
 };
 
