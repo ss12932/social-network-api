@@ -1,3 +1,5 @@
+const { Thought } = require('../../models');
+
 const createNewReactionForThought = async (req, res) => {
   try {
     const { thoughtId } = req.params;

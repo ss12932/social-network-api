@@ -1,3 +1,5 @@
+const { User } = require('../../models');
+
 const getAllUsers = async (req, res) => {
   try {
     const data = await User.find({}).populate('friends');

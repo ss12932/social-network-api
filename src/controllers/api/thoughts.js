@@ -1,3 +1,5 @@
+const { Thought } = require('../../models');
+
 const getAllThoughts = async (req, res) => {
   try {
     const data = await Thought.find({});
