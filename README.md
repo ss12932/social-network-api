@@ -3,6 +3,10 @@
 ## Table of Contents
 
 - [Description](#description)
+- [Deployed Link](#deployed-link)
+- [Github Repository Link](#github-repository-link)
+- [Video Walkthrough Link](#video-walkthrough-link)
+- [Screenshot](#screenshot)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
@@ -10,6 +14,8 @@
 - [Questions](#questions)
 
 ## Description
+
+A social network API web application where users can share their thoughts, react to friends’ thoughts, and create a friend list.
 
 ## Deployed Link
 
@@ -21,6 +27,8 @@ https://github.com/ss12932/social-network-api
 
 ## Video Walkthrough Link
 
+Due to screencastify's 5 min limit on recording videos, the video walkthoughs have been split into several parts:
+
 N/A
 
 ## Screenshot
@@ -31,9 +39,35 @@ N/A
 
 Please follow the instructions below:
 
+Before installation of this application, please ensure you have the mongoDB database (community edition) installed on your local machine. If you don't have it, please refer to the documentation on the official mongoDB website:
+
+https://www.mongodb.com/try/download/community
+
+Please visit the github repository link mentioned above or click [here](https://github.com/ss12932/social-network-api). Click on the green code button and select your preferred method of git cloning the application to your local machine by copying the link. This requires the use of your command line terminal, navigate to your local directory of choice and perform a git clone of this application. eg. for the https method, `git clone https://github.com/ss12932/social-network-api.git`,
+
+Afterwards, navigate to the application you just cloned:
+
+`cd social-network-api`
+
+and do a
+
+`code .`
+
+to open it in your VS code. Once opened in yout VS code IDE, do a
+
+`npm install` or `npm i`
+
+to install all dependencies required to run this application.
+
 ## Usage
 
 Please follow the instructions below:
+
+To initiate this application in your integrated terminal, please run:
+
+`npm run start`.
+
+This will start the application and also `npm run seed` to seed the dummy data provided by the faker js package.
 
 ## License
 

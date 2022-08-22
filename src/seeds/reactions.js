@@ -21,7 +21,6 @@ const generateDummyReactions = async () => {
 
       // using the friend id obtained above, we will search in the user collection for his document. We need to obtain extra information eg. his username since the author's friends array only contains ids.
       const findUsernameById = await User.findById(username_id);
-      console.log(findUsernameById);
 
       // with the friend's related document found above, we will create his reaction using his usename. this will satisfy every single field to create a reaction.
       const generateReaction = await Reaction.create({

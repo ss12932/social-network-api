@@ -10,7 +10,7 @@ const generateDummyThoughts = async () => {
     const thoughtText = faker.lorem.lines(3);
     const createdAt = faker.date.past();
 
-    //we will generate jsut a thought for each user.
+    //we will generate just a thought for each user.
     const generateThought = await Thought.create({
       username: usersFromDB[i].username,
       thoughtText,
