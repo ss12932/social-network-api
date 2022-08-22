@@ -44,9 +44,13 @@ const getSingleUser = async (req, res) => {
 const updateUserById = async (req, res) => {
   try {
     const { userId } = req.params;
-    const data = await User.findByIdAndUpdate(userId, {
-      $set: { ...req.body },
-    });
+    const data = await User.findByIdAndUpdate(
+      userId,
+      {
+        $set: { ...req.body },
+      },
+      { returnOriginal: false }
+    );
     return res.json({ data, success: true });
   } catch (err) {
     console.log(`Failed to get update user by Id || ${err.message}`);
