@@ -27,26 +27,48 @@ const createSingleThought = async (req, res) => {
       .json({ success: false, error: 'Failed to create single thought' });
   }
 };
-const getThoughtById = (req, res) => {
+const getThoughtById = async (req, res) => {
   try {
     const { thoughtId } = req.params;
 
     const thought = await Thought.findById(thoughtId);
 
     return res.json({ success: true, data });
-
   } catch (err) {
     console.log(`Failed to get thought by Id || ${err.message}`);
-    return res
-      .status
-      .json({ success: false, error: 'Failed to get thought by Id' });
+    return res.status(500).json({
+      success: false,
+      error: 'Failed to get thought by Id',
+    });
   }
 };
-const updateThoughtById = (req, res) => {
-  res.send('updateThoughtById');
+const updateThoughtById = async (req, res) => {
+  try {
+    const { thoughtId } = req.params;
+    const data = await Thought.findByIdAndUpdate(thoughtId, {
+      ...req.body,
+    });
+    return res.json({ success: true, data });
+  } catch (err) {
+    console.log(`Failed to update thought by Id || ${err.message}`);
+    return res.status(500).json({
+      success: false,
+      error: 'Failed to update thought by Id',
+    });
+  }
 };
-const deleteThoughtById = (req, res) => {
-  res.send('deleteThoughtById');
+const deleteThoughtById = async (req, res) => {
+  try {
+    const { thoughtId } = req.params;
+    const data = await Thought.findByIdAndDelete(thoughtId);
+    return res.json({ success: true, data });
+  } catch (err) {
+    console.log(`Failed to delete thought by Id || ${err.message}`);
+    return res.status(500).json({
+      success: false,
+      error: 'Failed to delete thought by id',
+    });
+  }
 };
 
 module.exports = {
