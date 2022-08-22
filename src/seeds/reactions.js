@@ -10,7 +10,7 @@ const generateDummyReactions = async () => {
     const thoughtAuthor = await User.find({
       username: thoughtsFromDB[i].username,
     });
-    // we are creating 3 reactions for each thought, using the friends array from the author we will randomly select a friend id to generate a reaction.
+    // we are creating 3 reactions for each thought, For each reaction, using the friends array from the author, we will randomly select a friend id to generate a reaction.
     for (let j = 0; j < 3; j++) {
       const reactionBody = faker.lorem.lines(3);
       const createdAt = faker.date.recent();
@@ -30,7 +30,7 @@ const generateDummyReactions = async () => {
         username: findUsernameById.username,
       });
 
-      // we need to update the thoughts' reactions array as well by pushing the reaction id.
+      // we need to update the thoughts' reactions array as well by pushing the reaction id of the newly created reaction.
       await Thought.findByIdAndUpdate(thoughtsFromDB[i]._id, {
         $push: {
           reactions: generateReaction._id,
