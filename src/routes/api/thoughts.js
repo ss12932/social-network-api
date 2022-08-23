@@ -14,6 +14,6 @@ router.route('/').get(getAllThoughts).post(createSingleThought);
 router.route('/:thoughtId').get(getThoughtById).put(updateThoughtById).delete(deleteThoughtById);
 
 //use nested router
-router.use(':thoughtId', reactions);
+router.use('/:thoughtId', reactions);
 
 module.exports = router;

@@ -1,13 +1,19 @@
-const { Thought } = require('../../models');
+const { Thought, Reaction } = require('../../models');
 
 const createNewReactionForThought = async (req, res) => {
   try {
     const { thoughtId } = req.params;
+    const { reactionBody, username } = req.body;
+    const newReaction = await Reaction.create({ reactionBody, username });
+
+    if (!newReaction) {
+      return res.status(500).json({ message: `Reaction not created` });
+    }
 
     const data = await Thought.findByIdAndUpdate(
       thoughtId,
       {
-        $push: { reactions: { ...req.body } },
+        $push: { reactions: newReaction._id },
       },
       { returnOriginal: false }
     );
