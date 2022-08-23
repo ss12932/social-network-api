@@ -1,0 +1,375 @@
+{
+	"info": {
+		"_postman_id": "5a4cd531-2a73-4eda-91ea-4f9ec40e7302",
+		"name": "social-network-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20862092"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"ss12932\",\n    \"email\": \"ss12932@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/:userId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/users/630409dd87d15dd6f354e1d7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"users",
+								"630409dd87d15dd6f354e1d7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/:userId",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"ss12932updatebyid\",\n    \"email\": \"ss12932updatebyid@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/users/630409dd87d15dd6f354e1d7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"users",
+								"630409dd87d15dd6f354e1d7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/:userId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"ss12932updated\",\n    \"email\": \"ss12932updated@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/users/630409dd87d15dd6f354e1d7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"users",
+								"630409dd87d15dd6f354e1d7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "thoughts",
+			"item": [
+				{
+					"name": "/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/thoughts/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"thoughts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"ss12932\",\n    \"thoughtText\": \"This is a cool application\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/thoughts/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"thoughts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/:thoughtId",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "/:thoughtId",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"Vita38.updated\",\n    \"thoughtText\": \"This is a cool social media API\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/thoughts/63049ea92f2d352e2a3e635d\n",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"thoughts",
+								"63049ea92f2d352e2a3e635d\n"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/:thoughtId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/thoughts/63049ea92f2d352e2a3e635d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"thoughts",
+								"63049ea92f2d352e2a3e635d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reactions",
+			"item": [
+				{
+					"name": "/reactions",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"Thalia_Barton44\",\n    \"reactionBody\": \"I know it is amazing!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/thoughts/63049ea92f2d352e2a3e6360/reactions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"thoughts",
+								"63049ea92f2d352e2a3e6360",
+								"reactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/reactions/:reactionId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/thoughts/63049ea92f2d352e2a3e6360/reactions/63049ea92f2d352e2a3e638b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"thoughts",
+								"63049ea92f2d352e2a3e6360",
+								"reactions",
+								"63049ea92f2d352e2a3e638b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "friends",
+			"item": [
+				{
+					"name": "/friends",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"friendId\": \"63049ea92f2d352e2a3e6335\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/users/63049ea92f2d352e2a3e6333/friends",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"users",
+								"63049ea92f2d352e2a3e6333",
+								"friends"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/friends/:friendId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/users/63049ea92f2d352e2a3e6333/friends/63049ea92f2d352e2a3e6335",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"users",
+								"63049ea92f2d352e2a3e6333",
+								"friends",
+								"63049ea92f2d352e2a3e6335"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
