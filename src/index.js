@@ -16,7 +16,7 @@ const init = async () => {
   try {
     await connectToDatabase();
     app.listen(PORT, () => {
-      console.log(`Server listening on https://localhost:${PORT} 🚀`);
+      console.log(`Server listening on http://localhost:${PORT} 🚀`);
     });
   } catch (err) {
     console.log(`Failed to initiate server || ${err.message}`);

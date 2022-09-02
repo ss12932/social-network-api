@@ -27,13 +27,16 @@ https://github.com/ss12932/social-network-api
 
 ## Video Walkthrough Link
 
-Due to screencastify's 5 min limit on recording videos, the video walkthoughs have been split into several parts:
+Due to screencastify's 5 min limit on recording videos, the video walkthroughs have been split into several parts:
 
-N/A
+- [Part 1 Video Walkthrough](https://drive.google.com/file/d/1XDHuJM_5--Nfi5Ul5WXzmixKTdyccGv9/view)
+- [Part 2 Video Walkthrough](https://drive.google.com/file/d/1r5WHfn_0S7xW-tx0mFEdS9yt-49UO18o/view)
+- [Part 3 Video Walkthrough](https://drive.google.com/file/d/1RUYpLiXnG9BtLLiJB3nF1ij7HBm0_Tvt/view)
+- [Part 4 Video Walkthrough](https://drive.google.com/file/d/1gGJL4ZaKL3h8COiy1RdjxZsxdn8Uuz7c/view)
 
 ## Screenshot
 
-![screenshot]()
+![screenshot](./public/assets/images/screenshot.png)
 
 ## Installation
 
